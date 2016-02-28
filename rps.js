@@ -1,6 +1,12 @@
-(function rps() {
-	rps.cpu = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+(function rps () {
 	rps.choice = prompt('[Rock], [paper], or [scissors]?').toLowerCase();
+	rps.cpu = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+	while (rps.cpu !== 'rock' && rps.cpu !== 'paper' && rps.cpu !== 'scissors') {
+		rps.choice = prompt('[Rock], [paper], or [scissors]?').toLowerCase();
+		if (rps.cpu !== 'rock' && rps.cpu !== 'paper' && rps.cpu !== 'scissors') {
+			alert('Pick [rock], [paper], or [scissors]!');
+		}
+	}
 	rps.win = function() {
 		return rps.choice + ' > ' + rps.cpu + '\nYou win!';
 	};
@@ -17,10 +23,6 @@
 				break;
 			case 'scissors':
 				alert((rps.cpu === 'paper') ? rps.win() : rps.lose());
-				break;
-			default:
-				alert('Pick rock], [paper], or [scissors]!');
-				rps();
 		}
 	} else {
 		alert(rps.choice + ' = ' + rps.cpu + '\nIt\'s a tie!');
