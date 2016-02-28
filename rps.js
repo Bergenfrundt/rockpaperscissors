@@ -1,29 +1,29 @@
 (function rps() {
-	var cpu = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
-	var choice = prompt('[Rock], [paper], or [scissors]?').toLowerCase();
-	function win() {
-		return choice + ' > ' + cpu + '\nYou win!';
-	}
-	function lose() {
-		return cpu + ' > ' + choice + '\nYou lose...';
-	}
-	if (cpu !== choice) {
-		switch (choice) {
+	rps.cpu = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+	rps.choice = prompt('[Rock], [paper], or [scissors]?').toLowerCase();
+	rps.win = function() {
+		return rps.choice + ' > ' + rps.cpu + '\nYou win!';
+	};
+	rps.lose = function() {
+		return rps.cpu + ' > ' + rps.choice + '\nYou lose...';
+	};
+	if (rps.cpu !== rps.choice) {
+		switch (rps.choice) {
 			case 'rock':
-				alert((cpu === 'scissors') ? win() : lose());
+				alert((rps.cpu === 'scissors') ? rps.win() : rps.lose());
 				break;
 			case 'paper':
-				alert((cpu === 'rock') ? win() : lose());
+				alert((rps.cpu === 'rock') ? rps.win() : rps.lose());
 				break;
 			case 'scissors':
-				alert((cpu === 'paper') ? win() : lose());
+				alert((rps.cpu === 'paper') ? rps.win() : rps.lose());
 				break;
 			default:
 				alert('Pick rock], [paper], or [scissors]!');
 				rps();
 		}
 	} else {
-		alert(choice + ' = ' + cpu + '\nIt\'s a tie!');
+		alert(rps.choice + ' = ' + rps.cpu + '\nIt\'s a tie!');
 	}
 	if (confirm('Would you like to play again?')) {
 		rps();
