@@ -1,6 +1,9 @@
-//This makes the play button work. Taken from arsh-sim
+// This makes the play button work. Taken from arsh-sim.
 window.onload = function() {
-    document.getElementById("play").onclick = function() {
+    var play = document.getElementById('play');
+    play.title = '';
+    play.onclick = function() {
         rps();
+        return false;
     };
 };
