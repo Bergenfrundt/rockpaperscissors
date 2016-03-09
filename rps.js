@@ -1,4 +1,4 @@
-(function rps () {
+function rps () {
 	rps.choice = prompt('[Rock], [paper], or [scissors]?').toLowerCase();
 	rps.cpu = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
 	while (rps.cpu !== 'rock' && rps.cpu !== 'paper' && rps.cpu !== 'scissors') {
@@ -30,4 +30,4 @@
 	if (confirm('Would you like to play again?')) {
 		rps();
 	}
-})();
+}
