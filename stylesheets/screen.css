@@ -245,6 +245,11 @@ section#downloads a.zip {
   background-position: 0 0;
 }
 
+section#downloads button {
+    float: inherit;
+    background-position: center;
+}
+
 section#downloads a.tgz {
   float: right;
   background-position: -275px 0;
