@@ -253,6 +253,12 @@ section#downloads button {
 .playbutton {
     text-align center;
 }
+
+button{
+  margin:auto;
+  display:block;
+}
+
 section#downloads a.tgz {
   float: right;
   background-position: -275px 0;
