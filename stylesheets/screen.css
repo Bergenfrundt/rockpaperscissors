@@ -250,10 +250,9 @@ section#downloads button {
     background-position: center;
 }
 
-button {
-    align-self: center;
+.playbutton {
+    text-align center;
 }
-
 section#downloads a.tgz {
   float: right;
   background-position: -275px 0;
